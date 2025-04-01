@@ -16,7 +16,7 @@ async function sendMessage() {
     // Faz a requisição ao backend
     try {
         const response = await fetch("https://meu-chatbot.onrender.com/chat", {
-            method: "POST",
+            method: ("/chat"),
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt: userInput })
         });
