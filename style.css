@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #1E1E2E;
+    background-color: #181818;
     font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
@@ -18,7 +18,7 @@ body {
 .chat-container {
     width: 100%;
     max-width: 700px;
-    background-color: #2C2F38;
+    background-color: #181818;
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
@@ -31,7 +31,7 @@ body {
 }
 
 .message {
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 12px 18px;
     border-radius: 12px;
     font-size: 16px;
@@ -42,7 +42,7 @@ body {
 }
 
 .user-message {
-    background-color: #007BFF;
+    background-color: #a7f203;
     align-self: flex-end;
 }
 
@@ -67,7 +67,7 @@ input {
     border-radius: 8px;
     font-size: 16px;
     outline: none;
-    background-color: #fff;
+    background-color: #333333;
     color: #000;
 }
 
@@ -76,8 +76,8 @@ input::placeholder {
 }
 
 button {
-    background-color: #007BFF;
-    color: white;
+    background-color: #A7F205;
+    color: rgb(0, 0, 0);
     border: none;
     padding: 12px 18px;
     border-radius: 8px;
@@ -87,7 +87,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #A7F203;
 }
 
 @keyframes fadeIn {
