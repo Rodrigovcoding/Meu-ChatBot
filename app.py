@@ -27,6 +27,6 @@ class PromptRequest(BaseModel):
 
 @app.post("/chat")
 async def chat(request: PromptRequest):
-    model = genai.GenerativeModel("models/gemini-1.5-flash")
+    model = genai.GenerativeModel("models/gemini-2.5-pro-exp-03-25")
     response = model.generate_content(request.prompt)
     return {"response": response.text}
