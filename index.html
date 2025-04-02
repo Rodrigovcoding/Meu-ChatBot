@@ -5,31 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOOBAY IA</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Posiciona o spinner no canto superior direito */
-        .spinner {
-          position: fixed;       /* fica sempre na tela */
-          top: 10px;            /* distância do topo */
-          right: 10px;          /* distância da direita */
-          width: 40px;
-          height: 40px;
-          border: 5px solid #ccc;
-          border-top: 5px solid #333; /* cor diferente na parte de cima */
-          border-radius: 50%;
-          animation: girar 1s linear infinite; /* chama o @keyframes girar */
-          display: none;        /* padrão: escondido */
-        }
-    
-        @keyframes girar {
-          0%   { transform: rotate(0deg);   }
-          100% { transform: rotate(360deg); }
-        }
-      </style>
 </head>
 <body>
     
     <div class="chat-container">
-        <img src="" alt="" style="max-width: 180px; margin: 0 auto; display: block;" />
+        <img src="imgs/Agrupar 3.png" alt="mylogo" style="block; margin: 0 auto; width: 512px;">
 
         <div id="messages" class="chat-messages"></div>
             
@@ -39,6 +19,7 @@
         </div>
     </div>
 
+    <!-- Script JS vem por último para garantir que tudo do HTML já foi carregado -->
     <script src="script.js"></script>
 </body>
 </html>
