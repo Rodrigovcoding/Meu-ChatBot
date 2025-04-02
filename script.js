@@ -44,15 +44,19 @@ async function sendMessage() {
         messagesDiv.appendChild(botMessage);
 
         // Efeito de digitação: adiciona a resposta letra por letra
-        let i = 0;
-        function typeWriter() {
-            if (i < data.response.length) {
-                botMessage.textContent += data.response.charAt(i);
-                i++;
-                setTimeout(typeWriter, 20); // ajuste a velocidade conforme necessário
+        if (data.response && typeof data.response === "string") {
+            let i = 0;
+            function typeWriter() {
+                if (i < data.response.length) {
+                    botMessage.textContent += data.response.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 20); // ajuste a velocidade conforme necessário
+                }
             }
+            typeWriter();
+        } else {
+            botMessage.textContent = "Erro: Resposta inválida do servidor.";
         }
-        typeWriter();
 
     } catch (error) {
         console.error("Erro:", error);
