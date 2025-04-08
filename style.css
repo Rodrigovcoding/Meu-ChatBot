@@ -1,115 +1,132 @@
+/* Importa a fonte 'Inter' do Google Fonts com pesos 300, 400 e 600 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
+/* Define o box-sizing como border-box para todos os elementos,
+   garantindo que padding e bordas sejam incluídos no tamanho total do elemento */
 * {
     box-sizing: border-box;
 }
 
+/* Estiliza o corpo da página */
 body {
-    background-color: #181818;
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 20px;
+    background-color: #181818; /* Cor de fundo escura */
+    font-family: 'Inter', sans-serif; /* Define a fonte principal */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da janela */
+    margin: 0; /* Remove margens padrão */
+    padding: 20px; /* Adiciona espaçamento interno */
 }
 
+/* Contêiner principal do chat */
 .chat-container {
-    width: 100%;
-    max-width: 700px;
-    background-color: #181818;
-    padding: 20px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    overflow-y: auto;
-    max-height: 80vh;
-    justify-content: flex-end;
+    width: 100%; /* Ocupa toda a largura disponível */
+    max-width: 700px; /* Define uma largura máxima */
+    background-color: #181818; /* Cor de fundo escura */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 16px; /* Bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4); /* Sombra para destacar o contêiner */
+    display: flex; /* Usa flexbox para organizar os elementos */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    gap: 15px; /* Espaçamento entre os elementos */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    max-height: 80vh; /* Limita a altura máxima */
+    justify-content: flex-end; /* Alinha os elementos ao final do contêiner */
 }
 
+/* Estilo das mensagens */
 .message {
-    color: rgb(255, 255, 255);
-    padding: 12px 18px;
-    border-radius: 12px;
-    font-size: 16px;
-    line-height: 1.4;
-    word-wrap: break-word;
-    max-width: 80%;
-    animation: fadeIn 0.3s ease-in-out;
-    background-color: #a7f203;
-    align-self: flex-end;
-    margin-top: 20px
+    color: rgb(255, 255, 255); /* Cor do texto branca */
+    padding: 12px 18px; /* Espaçamento interno */
+    border-radius: 12px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    line-height: 1.4; /* Altura da linha */
+    word-wrap: break-word; /* Quebra palavras longas */
+    max-width: 80%; /* Limita a largura máxima */
+    animation: fadeIn 0.3s ease-in-out; /* Animação de entrada */
+    background-color: #a7f203; /* Cor de fundo */
+    align-self: flex-end; /* Alinha a mensagem à direita */
+    margin-top: 20px; /* Espaçamento superior */
 }
 
+/* Estilo das mensagens do usuário */
 .user-message {
-    background-color: #a7f203;
-    align-self: flex-end;
-    padding: 20px
+    background-color: #a7f203; /* Cor de fundo verde */
+    align-self: flex-end; /* Alinha à direita */
+    padding: 20px; /* Espaçamento interno */
 }
 
+/* Estilo das mensagens da IA */
 .ai-message {
-    background-color: #5A5F69;
-    align-self: flex-start;
+    background-color: #5A5F69; /* Cor de fundo cinza */
+    align-self: flex-start; /* Alinha à esquerda */
 }
 
+/* Contêiner do campo de entrada */
 .input-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    margin-top: 20px;
+    display: flex; /* Usa flexbox para organizar os elementos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 10px; /* Espaçamento entre os elementos */
+    width: 100%; /* Ocupa toda a largura disponível */
+    margin-top: 20px; /* Espaçamento superior */
 }
 
+/* Estilo do campo de entrada */
 input {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    outline: none;
-    background-color: #2b2b2b;
-    color: #000;
+    flex: 1; /* Faz o campo ocupar o máximo de espaço possível */
+    padding: 12px; /* Espaçamento interno */
+    border: none; /* Remove bordas */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 16px; /* Tamanho da fonte */
+    outline: none; /* Remove o contorno ao focar */
+    background-color: #2b2b2b; /* Cor de fundo escura */
+    color: #000; /* Cor do texto */
 }
 
+/* Estilo do placeholder no campo de entrada */
 input::placeholder {
-    color: #777;
+    color: #777; /* Cor do texto do placeholder */
 }
 
+/* Estilo do botão */
 button {
-    background-color: #A7F205;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 12px 18px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 16px;
+    background-color: #A7F205; /* Cor de fundo verde */
+    color: rgb(0, 0, 0); /* Cor do texto preta */
+    border: none; /* Remove bordas */
+    padding: 12px 18px; /* Espaçamento interno */
+    border-radius: 8px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+    font-size: 16px; /* Tamanho da fonte */
 }
 
+/* Estilo do botão ao passar o mouse */
 button:hover {
-    background-color: #A7F203;
+    background-color: #A7F203; /* Cor de fundo ao passar o mouse */
 }
 
+/* Animação de fade-in para elementos */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(10px); } /* Começa invisível e deslocado */
+    to { opacity: 1; transform: translateY(0); } /* Fica visível e na posição original */
 }
+
+/* Estilo adicional para mensagens do bot */
 .bot-message {
-    font-style: italic;
-    background-color: #000000;
-    transition: all 0.3s ease;
+    font-style: italic; /* Texto em itálico */
+    background-color: #000000; /* Cor de fundo preta */
+    transition: all 0.3s ease; /* Transição suave para todas as propriedades */
 }
+
+/* Estilo adicional para o corpo */
 body {
-    background-color: #000;
-    background-image: radial-gradient(circle at top, rgba(166, 255, 77, 0.3) 0%, rgba(0, 0, 0, 1) 50%);
-    height: 100vh;
-    overflow: hidden;
-}
-@keyframes glowAnimation {
-    0% { background-image: radial-gradient(circle at top, rgba(166, 255, 77, 0.6) 0%, rgba(0, 0, 0, 1) 50%); }
-    100% { background-image: radial-gradient(circle at top, rgba(166, 255, 77, 0.1) 0%, rgba(0, 0, 0, 1) 50%); }
+    background-color: #000; /* Cor de fundo preta */
+    background-image: radial-gradient(circle at top, rgba(128, 255, 0, 0.507) 0%, rgba(0, 0, 0, 1) 50%); /* Gradiente radial */
+    height: 100vh; /* Altura total da janela */
+    display: flex; /* Usa flexbox */
+    padding-top: 0px; /* Remove o padding superior */
+    margin-top: 10px; /* Adiciona margem superior */
+    overflow: hidden; /* Remove a rolagem */
 }

@@ -65,3 +65,4 @@ async function sendMessage() {
     // Faz scroll para a última mensagem
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
+// 
