@@ -65,4 +65,14 @@ async function sendMessage() {
     // Faz scroll para a última mensagem
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
-// 
+//         // Mostra mensagem temporária enquanto espera a resposta
+const loadingMessage = document.createElement("div");
+loadingMessage.classList.add("message", "bot-message");
+loadingMessage.innerHTML = `
+    <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+`;
+messagesDiv.appendChild(loadingMessage);
